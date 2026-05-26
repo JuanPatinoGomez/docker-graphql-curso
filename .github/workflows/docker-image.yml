@@ -28,9 +28,11 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t jjpatino/docker-graphql-curso:1.0.1 .
+        docker build -t jjpatino/docker-graphql-curso:latest .
 
     - name: Push Docker Images
       run: |
         docker push jjpatino/docker-graphql-curso:1.0.1
+        docker push jjpatino/docker-graphql-curso:latest
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
